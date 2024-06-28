@@ -1,0 +1,25 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100%;
+}
+p{
+    font-weight: 500;
+    font-style: oblique;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header, .main, footer{
+    PADDING: 50px;
+}
+
+

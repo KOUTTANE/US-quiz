@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="score_show">
+        <h1 id="score"></h1>
+        <p class="desc">Well done</p>
+    </div>
+
+    <div class="correctAnswers">
+        <h1>Correct Answers</h1>
+        <div class="text">
+            <div class="correct">What is the capital of the United States? 
+                <p>A- Washington, D.C</p>
+            </div>
+
+            <div class="correct">In which year did the United States declare its independence?
+                <p>A- 1776</p>
+            </div>
+
+            <div class="correct">What is the capital of the United States? 
+                <p>C- James Madison</p>
+            </div>
+
+            <div class="correct">Which mountain range runs along the western part of the United States?
+                <p>A- Rocky Mountains</p>
+            </div>
+
+            <div class="correct">What is the national that is a commonly recognized symbol of the United States?
+                <p>None</p>
+            </div>
+
+            <div class="correct">Which document outlines the fundamental laws and principles of the United States?
+                <p>D- Constitution</p>
+            </div>
+
+            <div class="correct">Which U.S. state is known as the 'Sunshine State'?
+                <p>B- Florida</p>
+            </div>
+
+            <div class="correct">Who were the 16th and 26th Presidents of the United States?
+                <p>A- Abraham Lincoln</p>
+                <p>C- Andrew Jackson</p>
+            </div>
+
+            <div class="correct">What is the largest river in the United States?
+                <p>A- Mississippi River</p>
+            </div>
+
+            <div class="correct">In which city did the historic event known as the Boston Tea Party take place?
+                <p>B- Boston</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttonWrapper">
+        <a href="../../home/index.html" id="return">< retourner</a>
+    </div>
+    <script>
+        const score = parseInt(sessionStorage.getItem("score"));
+        const scoreEl = document.querySelector("#score");
+        const descEl = document.querySelector(".desc");
+        var desc = "";
+
+        if(score){
+            scoreEl.innerText = ("Score: " + score);
+            descEl.innerText = "";
+
+            if(score > 16){
+                desc = "Excellent"
+            }else if (score > 14){
+                desc = "Bien joué"
+            }else if (score > 10){
+                desc = "Assez bien"
+            }else{
+                desc = "echouée"
+            }
+
+            descEl.innerText = desc;
+        }else{
+            scoreEl.innerText = "Score non trouvé";
+        }
+    </script>
+</body>
+</html>

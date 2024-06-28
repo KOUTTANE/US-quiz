@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --first-color: #4A5880;
+    --second-color: #768DCC;
+    --third-color: #252C40;
+    --chill-color: #000000;
+    --dark-color: #000000;
+    --light-color: #EDE9F2;
+}
+
+body{
+    background: linear-gradient(var(--third-color), var(--dark-color));
+    color: var(--light-color);
+    /* background: var(--third-color); */
+}
+
+.main_div{
+    /* width: 500px; */
+    padding: 0 120px;
+    height: 100vh;
+    background: url(/images/usamap.jpg) scroll ;
+    background-size: 100%;
+    background-position: center;
+    transition: .3s ease;
+}
+
+.main_div.active{
+    filter: blur(15px);
+    pointer-events: none;
+}
+
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100%;
+}
+
+#logo_nav{
+    color: var(--light-color);
+    font-size: 32px;
+    text-decoration: none;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px #09001d);
+}
+
+nav ul{
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--second-color)
+}
+
+
+
+.infooo p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100vh;
+    text-align: start;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
